@@ -34,7 +34,7 @@ def upgrade() -> None:
                     sa.Column('registered_at', sa.TIMESTAMP(), nullable=True),
                     sa.Column('role', sa.Integer(), nullable=True),
                     sa.ForeignKeyConstraint(['role'], ['roles.id'], ),
-                    sa.PrimaryKeyConstraint('id', 'username')
+                    sa.PrimaryKeyConstraint('id', 'username', 'number')
     )
     # ### end Alembic commands ###
 
